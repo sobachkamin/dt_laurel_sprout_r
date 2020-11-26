@@ -790,12 +790,8 @@ get_prop(flags_health_check, exported_audio_prop)
 get_prop(flags_health_check, adbd_prop)
 get_prop(flags_health_check, exported_bluetooth_prop)
 get_prop(flags_health_check, exported_overlay_prop)
-
 #get_prop(flags_health_check, vendor_wfd_service_prop)
-#allow flags_health_check vendor_wfd_service_prop:file { open };
-#allow flags_health_check vendor_wfd_service_prop:file { getattr };
-#allow flags_health_check vendor_wfd_service_prop:file { map };
-#allow flags_health_check vendor_wfd_service_prop:file { read };
+allow flags_health_check vendor_wfd_service_prop:file { open getattr map };
 #get_prop(flags_health_check, vendor_wfd_sys_debug_prop)
 #allow flags_health_check vendor_wfd_sys_debug_prop:file { open getattr };
 #get_prop(flags_health_check, vendor_wigig_core_prop)
